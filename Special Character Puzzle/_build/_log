@@ -1,0 +1,32 @@
+### Starting build.
+# Target: puzzleTests.ml.depends, tags: { extension:ml, file:puzzleTests.ml, ocaml, ocamldep, quiet }
+/usr/bin/ocamldep.opt -modules puzzleTests.ml > puzzleTests.ml.depends # cached
+# Target: listSet.ml.depends, tags: { extension:ml, file:listSet.ml, ocaml, ocamldep, quiet }
+/usr/bin/ocamldep.opt -modules listSet.ml > listSet.ml.depends # cached
+# Target: set.ml.depends, tags: { extension:ml, file:set.ml, ocaml, ocamldep, quiet }
+/usr/bin/ocamldep.opt -modules set.ml > set.ml.depends # cached
+# Target: set.cmo, tags: { byte, compile, extension:cmo, extension:ml, file:set.cmo, file:set.ml, implem, ocaml, quiet }
+/usr/bin/ocamlc.opt -c -o set.cmo set.ml # cached
+# Target: listSet.cmo, tags: { byte, compile, extension:cmo, extension:ml, file:listSet.cmo, file:listSet.ml, implem, ocaml, quiet }
+/usr/bin/ocamlc.opt -c -o listSet.cmo listSet.ml # cached
+# Target: puzzle.ml.depends, tags: { extension:ml, file:puzzle.ml, ocaml, ocamldep, quiet }
+/usr/bin/ocamldep.opt -modules puzzle.ml > puzzle.ml.depends # cached
+# Target: util.ml.depends, tags: { extension:ml, file:util.ml, ocaml, ocamldep, quiet }
+/usr/bin/ocamldep.opt -modules util.ml > util.ml.depends # cached
+# Target: util.cmo, tags: { byte, compile, extension:cmo, extension:ml, file:util.cmo, file:util.ml, implem, ocaml, quiet }
+/usr/bin/ocamlc.opt -c -o util.cmo util.ml # cached
+# Target: puzzle.cmo, tags: { byte, compile, extension:cmo, extension:ml, file:puzzle.cmo, file:puzzle.ml, implem, ocaml, quiet }
+/usr/bin/ocamlc.opt -c -o puzzle.cmo puzzle.ml # cached
+# Target: tests.ml.depends, tags: { extension:ml, file:tests.ml, ocaml, ocamldep, quiet }
+/usr/bin/ocamldep.opt -modules tests.ml > tests.ml.depends # cached
+# Target: tests.cmo, tags: { byte, compile, extension:cmo, extension:ml, file:tests.cmo, file:tests.ml, implem, ocaml, quiet }
+/usr/bin/ocamlc.opt -c -o tests.cmo tests.ml # cached
+# Target: tree.ml.depends, tags: { extension:ml, file:tree.ml, ocaml, ocamldep, quiet }
+/usr/bin/ocamldep.opt -modules tree.ml > tree.ml.depends # cached
+# Target: tree.cmo, tags: { byte, compile, extension:cmo, extension:ml, file:tree.cmo, file:tree.ml, implem, ocaml, quiet }
+/usr/bin/ocamlc.opt -c -o tree.cmo tree.ml # cached
+# Target: puzzleTests.cmo, tags: { byte, compile, extension:cmo, extension:ml, file:puzzleTests.cmo, file:puzzleTests.ml, implem, ocaml, quiet }
+/usr/bin/ocamlc.opt -c -o puzzleTests.cmo puzzleTests.ml
+# Target: puzzleTests.byte, tags: { byte, dont_link_with, extension:byte, file:puzzleTests.byte, link, ocaml, program, quiet }
+/usr/bin/ocamlc.opt set.cmo listSet.cmo util.cmo puzzle.cmo tests.cmo tree.cmo puzzleTests.cmo -o puzzleTests.byte
+# Compilation successful.

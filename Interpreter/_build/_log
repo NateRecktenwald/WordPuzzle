@@ -1,0 +1,16 @@
+### Starting build.
+# Target: evalPart3Tests.ml.depends, tags: { extension:ml, file:evalPart3Tests.ml, ocaml, ocamldep, quiet }
+/usr/bin/ocamldep.opt -modules evalPart3Tests.ml > evalPart3Tests.ml.depends # cached
+# Target: expr.ml.depends, tags: { extension:ml, file:expr.ml, ocaml, ocamldep, quiet }
+/usr/bin/ocamldep.opt -modules expr.ml > expr.ml.depends # cached
+# Target: expr.cmo, tags: { byte, compile, extension:cmo, extension:ml, file:expr.cmo, file:expr.ml, implem, ocaml, quiet }
+/usr/bin/ocamlc.opt -c -o expr.cmo expr.ml # cached
+# Target: tests.ml.depends, tags: { extension:ml, file:tests.ml, ocaml, ocamldep, quiet }
+/usr/bin/ocamldep.opt -modules tests.ml > tests.ml.depends # cached
+# Target: tests.cmo, tags: { byte, compile, extension:cmo, extension:ml, file:tests.cmo, file:tests.ml, implem, ocaml, quiet }
+/usr/bin/ocamlc.opt -c -o tests.cmo tests.ml # cached
+# Target: evalPart3Tests.cmo, tags: { byte, compile, extension:cmo, extension:ml, file:evalPart3Tests.cmo, file:evalPart3Tests.ml, implem, ocaml, quiet }
+/usr/bin/ocamlc.opt -c -o evalPart3Tests.cmo evalPart3Tests.ml # cached
+# Target: evalPart3Tests.byte, tags: { byte, dont_link_with, extension:byte, file:evalPart3Tests.byte, link, ocaml, program, quiet }
+/usr/bin/ocamlc.opt expr.cmo tests.cmo evalPart3Tests.cmo -o evalPart3Tests.byte # cached
+# Compilation successful.
